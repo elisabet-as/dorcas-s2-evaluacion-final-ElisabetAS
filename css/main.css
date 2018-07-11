@@ -4,4 +4,55 @@
   border: solid #00afab 3px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(#ffc375, #ffa212);
+}
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.searcher-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.subtitles {
+  text-align: center;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=main.css.map */

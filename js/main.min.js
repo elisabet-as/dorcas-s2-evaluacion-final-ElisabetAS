@@ -24,15 +24,16 @@ function showList() {
 
   //creo etiquetas para la lista, el titulo y la imagen de la serie y lo meto en la lista del html
         var elementList = document.createElement('li');
-  //creo el evento para hacerlos favoritos
-        elementList.addEventListener('click', favourite);
+        elementList.classList.add('list--item');
 
         var titleSerieContainer = document.createElement('h2');
         var titleSerie = document.createTextNode(nameSerie);
+        titleSerieContainer.classList.add('subtitles');
+  //creo el evento para hacerlos favoritos
+        elementList.addEventListener('click', favourite);
   //añado una etiqueta img y a esta le añado un atributo src
         var tagImage = document.createElement('img');
         tagImage.setAttribute('src', imageSerie);
-
   //creo un condicional para que las series que no tengan imagen adquieran la imagen de placeholder
         if (imageSerie === null) {
           tagImage.src = 'https://via.placeholder.com/210x295/cccccc/666666/?text=No image';
@@ -42,7 +43,7 @@ function showList() {
         }
   //voy metiendo cada cosa dentro de otra
         titleSerieContainer.appendChild(titleSerie);
-        elementList.appendChild(titleSerie);
+        elementList.appendChild(titleSerieContainer);
         elementList.appendChild(tagImage);
         list.appendChild(elementList);
       }
