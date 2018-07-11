@@ -8,12 +8,14 @@ var list = document.querySelector('.list');
 function showList() {
   //recojo el valor del input
   var searchedElement = searcherInput.value;
-//Accedo a la búsqueda del input mediante la api
+  //limpio la búsqueda anterior
+  list.innerHTML = '';
+  //Accedo a la búsqueda del input mediante la api
   fetch('http://api.tvmaze.com/search/shows?q=' + searchedElement)
     .then(function(response) {
       return response.json();
     })
-//recojo el array y lo recorro para recoger el nombre y la imagen de cada objeto (serie)
+  //recojo el array y lo recorro para recoger el nombre y la imagen de cada objeto (serie)
     .then(function(json) {
       var result = json;
       for (var i = 0; i < result.length; i++) {
@@ -45,8 +47,5 @@ function showList() {
       }
     });
 }
-
-
-
 
 searchButton.addEventListener('click', showList);
