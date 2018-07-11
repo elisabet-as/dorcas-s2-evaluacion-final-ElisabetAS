@@ -1,1 +1,7 @@
+.favouriteSerie {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c37bb1), to(#af1c8d));
+  background-image: linear-gradient(#c37bb1, #af1c8d);
+  border: solid #00afab 3px;
+}
 
+/*# sourceMappingURL=main.css.map */
