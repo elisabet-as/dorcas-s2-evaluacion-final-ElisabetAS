@@ -5,7 +5,6 @@
 }
 
 body {
-  background-image: radial-gradient($backgroundcolorA, $backgroundcolorB);
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -13,10 +12,8 @@ body {
 .title {
   text-align: center;
   margin-top: 30px;
-  font-family: $fontfamilysecondary;
-  font-size: 50px;
-  color: $colorborder;
-  font-weight: lighter;
+  font-family: $fontfamilyprimary;
+  font-size: 30px;
 }
 
 .searcher-container {
@@ -29,12 +26,12 @@ body {
   border: none;
   background: none;
   outline: none;
-  border-bottom: solid $colorborder 3px;
+  border-bottom: solid $colordark 1px;
   height: 40px;
   width: 290px;
   font-size: 20px;
   font-family: $fontfamilyprimary;
-  color: $colortargetB;
+  color: $colordark;
 }
 
 .list {
@@ -48,7 +45,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  color: $colortargetB;
+  color: $coloraux;
   font-family: $fontfamilyprimary;
   font-size: 30px;
 }
@@ -59,14 +56,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: $colorbackgroundtarget;
 }
 
 .subtitles {
   text-align: center;
   margin-top: 10px;
-  color: $colorborder;
-  font-family: $fontfamilysecondary;
-  font-weight: lighter;
+  font-family: $fontfamilyprimary;
+  color: $coloraux;
 }
 
 @media all and(max-width:433px) {

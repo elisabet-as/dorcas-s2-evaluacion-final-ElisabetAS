@@ -1,16 +1,12 @@
 .search {
   height: 40px;
   width: 100px;
-  border: solid $colorborder 3px;
-  border-radius: 10px;
+  border: solid $coloraux 1px;
   outline: none;
   cursor: pointer;
-  background-image: radial-gradient($backgroundcolorA, $colorauxiliar);
+  background-color: $coloraux;
   font-size: 20px;
   font-family: $fontfamilyprimary;
   font-weight: bold;
-  color: $colortargetB;
-  &:hover {
-    background-image: radial-gradient($colorauxiliar, $backgroundcolorA);
-  }
+  color: $colorlight;
 }
