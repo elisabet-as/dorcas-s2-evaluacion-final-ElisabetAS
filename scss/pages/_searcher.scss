@@ -32,7 +32,7 @@ body {
   border-bottom: solid $colorborder 3px;
   height: 40px;
   width: 290px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: $fontfamilyprimary;
   color: $colortargetB;
 }
@@ -42,6 +42,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+
+.notresult {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: $colortargetB;
+  font-family: $fontfamilyprimary;
+  font-size: 30px;
 }
 
 .list--item {

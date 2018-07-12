@@ -18,10 +18,17 @@ function showList() {
   //recojo el array y lo recorro para recoger el nombre y la imagen de cada objeto (serie)
     .then(function(json) {
       var result = json;
+      //si no hay resultados frase auxiliar
+      if (result.length === 0) {
+        list.classList.add('notresult');
+        list.innerHTML = ('No hay resultados que coincidan con esta búsqueda');
+      }
+      else {
+        list.classList.remove('notresult');
+      }
       for (var i = 0; i < result.length; i++) {
         var nameSerie = result[i].show.name;
         var imageSerie = result[i].show.image;
-
   //creo etiquetas para la lista, el titulo y la imagen de la serie y lo meto en la lista del html
         var elementList = document.createElement('li');
         elementList.classList.add('list--item');

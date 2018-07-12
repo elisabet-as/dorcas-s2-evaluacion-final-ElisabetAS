@@ -6,7 +6,11 @@
   outline: none;
   cursor: pointer;
   background-image: radial-gradient($backgroundcolorA, $colorauxiliar);
-  font-size: 30px;
+  font-size: 20px;
   font-family: $fontfamilyprimary;
+  font-weight: bold;
   color: $colortargetB;
+  &:hover {
+    background-image: radial-gradient($colorauxiliar, $backgroundcolorA);
+  }
 }

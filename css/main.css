@@ -13,9 +13,14 @@
   outline: none;
   cursor: pointer;
   background-image: radial-gradient(#ffc375, #b0e4e6);
-  font-size: 30px;
-  font-family: "Nanum Pen Script", sans-serif;
+  font-size: 20px;
+  font-family: "Architects Daughter", sans-serif;
+  font-weight: bold;
   color: #af1c8d;
+}
+
+.search:hover {
+  background-image: radial-gradient(#b0e4e6, #ffc375);
 }
 
 * {
@@ -53,8 +58,8 @@ body {
   border-bottom: solid #00afab 3px;
   height: 40px;
   width: 290px;
-  font-size: 30px;
-  font-family: "Nanum Pen Script", sans-serif;
+  font-size: 20px;
+  font-family: "Architects Daughter", sans-serif;
   color: #af1c8d;
 }
 
@@ -63,6 +68,19 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+
+.notresult {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #af1c8d;
+  font-family: "Architects Daughter", sans-serif;
+  font-size: 30px;
 }
 
 .list--item {
