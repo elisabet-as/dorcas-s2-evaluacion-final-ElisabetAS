@@ -2,6 +2,20 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#c37bb1), to(#af1c8d));
   background-image: linear-gradient(#c37bb1, #af1c8d);
   border: solid #00afab 3px;
+  border-radius: 10px;
+}
+
+.search {
+  height: 40px;
+  width: 100px;
+  border: solid #00afab 3px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  background-image: radial-gradient(#ffc375, #b0e4e6);
+  font-size: 30px;
+  font-family: "Nanum Pen Script", sans-serif;
+  color: #af1c8d;
 }
 
 * {
@@ -13,17 +27,35 @@
 
 body {
   background-image: radial-gradient(#ffc375, #ffa212);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .title {
   text-align: center;
   margin-top: 30px;
+  font-family: "Knewave", sans-serif;
+  font-size: 50px;
+  color: #00afab;
+  font-weight: lighter;
 }
 
 .searcher-container {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 50px;
+}
+
+.searcher {
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: solid #00afab 3px;
+  height: 40px;
+  width: 290px;
+  font-size: 30px;
+  font-family: "Nanum Pen Script", sans-serif;
+  color: #af1c8d;
 }
 
 .list {
@@ -53,6 +85,9 @@ body {
 .subtitles {
   text-align: center;
   margin-top: 10px;
+  color: #00afab;
+  font-family: "Knewave", sans-serif;
+  font-weight: lighter;
 }
 
 /*# sourceMappingURL=main.css.map */
