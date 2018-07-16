@@ -11,13 +11,14 @@ function showList() {
   //limpio la búsqueda anterior
   list.innerHTML = '';
   //Accedo a la búsqueda del input mediante la api
-  fetch('http://api.tvmaze.com/search/shows?q=' + searchedElement)
+  fetch('http://api.tvmaze.com/search/people?q=' + searchedElement)
     .then(function(response) {
       return response.json();
     })
   //recojo el array y lo recorro para recoger el nombre y la imagen de cada objeto (serie)
     .then(function(json) {
       var result = json;
+      console.log(result);
       //si no hay resultados frase auxiliar
       if (result.length === 0) {
         list.classList.add('notresult');
@@ -27,8 +28,8 @@ function showList() {
         list.classList.remove('notresult');
       }
       for (var i = 0; i < result.length; i++) {
-        var nameSerie = result[i].show.name;
-        var imageSerie = result[i].show.image;
+        var nameSerie = result[i].person.name;
+        var imageSerie = result[i].person.image;
   //creo etiquetas para la lista, el titulo y la imagen de la serie y lo meto en la lista del html
         var elementList = document.createElement('li');
         elementList.classList.add('list--item');
@@ -46,7 +47,7 @@ function showList() {
           tagImage.src = 'https://via.placeholder.com/210x295/cccccc/666666/?text=No image';
         }
         else {
-          tagImage.src = result[i].show.image.medium;
+          tagImage.src = result[i].person.image.medium;
         }
   //voy metiendo cada cosa dentro de otra
         titleSerieContainer.appendChild(titleSerie);
@@ -54,6 +55,8 @@ function showList() {
         elementList.appendChild(tagImage);
         list.appendChild(elementList);
       }
+      var textResultsNumber = document.querySelector('.results--number');
+      textResultsNumber.innerHTML = 'Hay ' + result.length + ' resultados para la búsqueda ' + searchedElement;
     });
 }
 
@@ -67,6 +70,7 @@ function favourite(event) {
     addClass.classList.add('favouriteSerie');
   }
 }
+
 
 
 searchButton.addEventListener('click', showList);
